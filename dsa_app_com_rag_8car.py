@@ -90,7 +90,7 @@ def dsa_cria_banco_vetorial(pdf_bytes) -> Chroma:
     docs = PyPDFLoader(tmp_path).load()
     
     # Cria o divisor de texto em blocos menores com sobreposição entre partes
-    splitter = RecursiveCharacterTextSplitter(chunk_size = 8, chunk_overlap = 2)
+    splitter = RecursiveCharacterTextSplitter(chunk_size = 6, chunk_overlap = 2)
 
     # Aplica o divisor de texto e cria os chunks
     chunks = splitter.split_documents(docs)
